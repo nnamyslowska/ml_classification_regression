@@ -1,0 +1,442 @@
+{
+  "version": "v6",
+  "train_raw_shape": [
+    2512,
+    41
+  ],
+  "kaggle_raw_shape": [
+    628,
+    41
+  ],
+  "split_sizes": {
+    "train": 1758,
+    "validation": 377,
+    "internal_test": 377,
+    "kaggle_test": 628
+  },
+  "target_policy": {
+    "validation_and_internal_test_targets": "raw_not_cleaned_not_winsorized",
+    "available_training_targets": [
+      "y_train_log_raw.csv",
+      "y_train_log_winsorized.csv",
+      "y_train_log_floor500.csv",
+      "train_keep_salary_ge_500_mask.csv"
+    ],
+    "low_salary_floor_usd": 500.0,
+    "low_salary_counts_below_floor": {
+      "train": 57,
+      "validation": 13,
+      "internal_test": 11
+    },
+    "global_winsor_bounds_train_only": [
+      76.26,
+      178901.9000000001
+    ],
+    "winsor_min_region_n": 30
+  },
+  "feature_policy_changes_v6": {
+    "build_vs_buy": "one_hot_not_ordinal",
+    "ols_safe_numeric": [
+      "coding.years.professional",
+      "job.satisfaction",
+      "years.before.professional"
+    ],
+    "full_numeric": [
+      "coding.years.professional",
+      "experience.years",
+      "job.satisfaction",
+      "years.before.professional",
+      "coding.years.professional_sq",
+      "experience.years_sq"
+    ],
+    "region_target_encoding": "not_included_here_to_avoid_cv_leakage; implement inside modeling if tested",
+    "duan_smearing": "not_a_feature_engineering_step; implement in modeling evaluation"
+  },
+  "feature_shapes": {
+    "full_scaled": [
+      1758,
+      303
+    ],
+    "ols_safe_scaled": [
+      1758,
+      108
+    ]
+  },
+  "saved_files_policy": {
+    "minimal_outputs": true,
+    "unscaled_feature_files_saved": false,
+    "no_duplicate_alias_files": true
+  },
+  "missing_indicator_cols": [
+    "experience.years",
+    "people.manager",
+    "databases",
+    "cloud.platforms",
+    "web.frameworks",
+    "other.tech",
+    "ai.search.tools",
+    "ai.tools.used",
+    "ai.sentiment",
+    "ai.trust",
+    "ai.complex.rating",
+    "daily.search.time",
+    "daily.answer.time",
+    "job.satisfaction"
+  ],
+  "n_missing_indicator_cols": 14,
+  "n_onehot_dummy_cols": 63,
+  "n_multi_binary_cols": 195,
+  "n_multi_select_cols": 15,
+  "multi_count_in_full_cols": [
+    "prog.languages",
+    "databases",
+    "cloud.platforms",
+    "web.frameworks",
+    "other.tech",
+    "dev.tools",
+    "dev.environments",
+    "personal.os",
+    "work.os",
+    "project.mgmt.tools",
+    "comm.tools",
+    "ai.search.tools"
+  ],
+  "multi_count_dropped_from_full_as_redundant": [
+    "ai.tools.used",
+    "side.coding",
+    "how.learned.coding"
+  ],
+  "zero_variance_removed": {
+    "full": [],
+    "ols_safe": []
+  },
+  "checks": {
+    "full_train_nans": 0,
+    "full_train_duplicate_columns": 0,
+    "full_train_zero_variance_columns": 0,
+    "ols_safe_train_nans": 0,
+    "ols_safe_train_duplicate_columns": 0,
+    "ols_safe_train_zero_variance_columns": 0,
+    "ols_safe_has_all_multiselect_counts": true,
+    "train_keep_salary_ge_500_mask_length_ok": 1,
+    "full_train_matrix_rank": 303,
+    "full_train_n_features": 303,
+    "ols_safe_train_matrix_rank": 108,
+    "ols_safe_train_n_features": 108
+  },
+  "multi_top_items": {
+    "prog.languages": [
+      "JavaScript",
+      "SQL",
+      "HTML/CSS",
+      "TypeScript",
+      "Python",
+      "Bash/Shell (all shells)",
+      "Java",
+      "C#",
+      "C++",
+      "PHP",
+      "Go",
+      "C",
+      "PowerShell",
+      "Kotlin",
+      "Rust",
+      "Dart",
+      "Groovy",
+      "Ruby",
+      "Assembly",
+      "Lua"
+    ],
+    "databases": [
+      "PostgreSQL",
+      "MySQL",
+      "SQLite",
+      "MongoDB",
+      "Redis",
+      "Microsoft SQL Server",
+      "Elasticsearch",
+      "MariaDB",
+      "Dynamodb",
+      "Oracle",
+      "BigQuery",
+      "H2",
+      "Firebase Realtime Database",
+      "Cloud Firestore",
+      "Cosmos DB"
+    ],
+    "cloud.platforms": [
+      "Amazon Web Services (AWS)",
+      "Microsoft Azure",
+      "Google Cloud",
+      "Cloudflare",
+      "Firebase",
+      "Digital Ocean",
+      "Heroku",
+      "Vercel",
+      "Hetzner",
+      "VMware",
+      "Netlify",
+      "OVH",
+      "OpenShift",
+      "Managed Hosting",
+      "Linode, now Akamai"
+    ],
+    "web.frameworks": [
+      "React",
+      "Node.js",
+      "Angular",
+      "ASP.NET CORE",
+      "jQuery",
+      "Vue.js",
+      "Next.js",
+      "Spring Boot",
+      "Express",
+      "ASP.NET",
+      "FastAPI",
+      "Django",
+      "Flask",
+      "NestJS",
+      "WordPress"
+    ],
+    "other.tech": [
+      ".NET (5+)",
+      "RabbitMQ",
+      ".NET Framework (1.0 - 4.8)",
+      "Pandas",
+      "NumPy",
+      "Spring Framework",
+      "Apache Kafka",
+      "TensorFlow",
+      "Torch/PyTorch",
+      "React Native",
+      "Opencv",
+      "Flutter",
+      "Qt",
+      "Scikit-Learn",
+      "Electron"
+    ],
+    "dev.tools": [
+      "Docker",
+      "npm",
+      "Pip",
+      "Kubernetes",
+      "Homebrew",
+      "Webpack",
+      "Yarn",
+      "Make",
+      "NuGet",
+      "Gradle",
+      "Maven (build tool)",
+      "Vite",
+      "Terraform",
+      "Visual Studio Solution",
+      "MSBuild"
+    ],
+    "dev.environments": [
+      "Visual Studio Code",
+      "IntelliJ IDEA",
+      "Visual Studio",
+      "Notepad++",
+      "PyCharm",
+      "Vim",
+      "Android Studio",
+      "WebStorm",
+      "Sublime Text",
+      "Neovim",
+      "Jupyter Notebook/JupyterLab",
+      "PhpStorm",
+      "Xcode",
+      "Rider",
+      "Nano"
+    ],
+    "personal.os": [
+      "Windows",
+      "MacOS",
+      "Ubuntu",
+      "Android",
+      "Windows Subsystem for Linux (WSL)",
+      "iOS",
+      "Debian",
+      "Other Linux-based",
+      "Arch",
+      "iPadOS"
+    ],
+    "work.os": [
+      "Windows",
+      "MacOS",
+      "Ubuntu",
+      "Windows Subsystem for Linux (WSL)",
+      "Android",
+      "iOS",
+      "Debian",
+      "Other Linux-based",
+      "Arch",
+      "Red Hat"
+    ],
+    "project.mgmt.tools": [
+      "Jira",
+      "Confluence",
+      "Trello",
+      "Markdown File",
+      "Miro",
+      "Notion",
+      "Azure Devops",
+      "GitHub Discussions",
+      "Obsidian",
+      "Asana",
+      "Redmine",
+      "Clickup"
+    ],
+    "comm.tools": [
+      "Slack",
+      "Microsoft Teams",
+      "Google Meet",
+      "Zoom",
+      "Discord",
+      "Telegram",
+      "Skype",
+      "Whatsapp",
+      "Signal",
+      "Google Chat",
+      "Cisco Webex Teams",
+      "Mattermost"
+    ],
+    "ai.search.tools": [
+      "ChatGPT",
+      "GitHub Copilot",
+      "Google Gemini",
+      "Bing AI",
+      "Visual Studio Intellicode",
+      "Tabnine",
+      "Claude",
+      "Codeium",
+      "WolframAlpha",
+      "Phind",
+      "Amazon Q",
+      "Perplexity AI"
+    ],
+    "ai.tools.used": [
+      "Writing code",
+      "Search for answers",
+      "Debugging and getting help",
+      "Generating content or synthetic data",
+      "Documenting code",
+      "Testing code",
+      "Learning about a codebase",
+      "Committing and reviewing code",
+      "Project planning",
+      "Deployment and monitoring",
+      "Predictive analytics",
+      "Other"
+    ],
+    "side.coding": [
+      "Hobby",
+      "Professional development or self-paced learning from online courses",
+      "Contribute to open-source projects",
+      "Freelance/contract work",
+      "Bootstrapping a business",
+      "School or academic work",
+      "I don't code outside of work",
+      "Other (please specify):"
+    ],
+    "how.learned.coding": [
+      "Other online resources (e.g., videos, blogs, forum, online community)",
+      "Online Courses or Certification",
+      "Books / Physical media",
+      "School (i.e., University, College, etc)",
+      "On the job training",
+      "Colleague",
+      "Coding Bootcamp",
+      "Friend or family member",
+      "Other (please specify):"
+    ]
+  },
+  "rare_keep_values": {
+    "region": [
+      "R17",
+      "R11",
+      "R13",
+      "R18",
+      "R03",
+      "R05",
+      "R06",
+      "R04",
+      "R16",
+      "R09",
+      "R08",
+      "R02",
+      "R01",
+      "R12"
+    ],
+    "employment.type": [
+      "Full-time",
+      "Freelance/Self-employed",
+      "Student",
+      "Part-time"
+    ],
+    "work.location": [
+      "Remote",
+      "Hybrid (some remote, some in-person)",
+      "In-person"
+    ],
+    "dev.role": [
+      "Developer, back-end",
+      "Developer, full-stack",
+      "Developer, front-end",
+      "Other",
+      "Developer, mobile",
+      "Developer, desktop or enterprise applications",
+      "Developer, QA or test",
+      "DevOps specialist",
+      "Data engineer",
+      "Developer, embedded applications or devices",
+      "Engineering manager",
+      "Developer, game or graphics",
+      "Data scientist or machine learning specialist",
+      "Cloud infrastructure engineer"
+    ],
+    "industry": [
+      "Software Development",
+      "__Missing__",
+      "Other",
+      "Fintech",
+      "Internet, Telecomm or Information Services",
+      "Retail and Consumer Services",
+      "Media & Advertising Services",
+      "Banking/Financial Services",
+      "Healthcare",
+      "Computer Systems Design and Services",
+      "Transportation, or Supply Chain",
+      "Manufacturing"
+    ],
+    "cloud.hosting": [
+      "__Missing__",
+      "Hybrid (on-prem and cloud)",
+      "Cloud only (single or multi-cloud)",
+      "On-prem"
+    ],
+    "first.help.source": [
+      "Traditional public search engine",
+      "__Missing__",
+      "A coworker",
+      "AI-powered search (paid)",
+      "AI-powered search (free)",
+      "Slack search",
+      "Do search of internal share drives/storage locations for documentation (i.e., not a structured knowledge base)",
+      "Internal Developer portal",
+      "Other"
+    ],
+    "ai.job.threat": [
+      "No",
+      "I'm not sure",
+      "__Missing__",
+      "Yes"
+    ],
+    "build.vs.buy": [
+      "Is ready-to-go but also customizable for growth and targeted use cases",
+      "Out-of-the-box is ready to go with little need for customization",
+      "Is set up to be customized and needs to be engineered into a usable product",
+      "__Missing__"
+    ]
+  }
+}

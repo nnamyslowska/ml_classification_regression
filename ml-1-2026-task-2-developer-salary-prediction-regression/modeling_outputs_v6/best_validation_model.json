@@ -1,0 +1,19 @@
+{
+  "model_name": "SVR_RBF | winsorized | {'C': 1.0, 'epsilon': 0.1, 'gamma': 'scale'}",
+  "model_family": "SVR_RBF",
+  "feature_set": "FULL",
+  "target_variant": "winsorized",
+  "params": "{\"C\": 1.0, \"epsilon\": 0.1, \"gamma\": \"scale\"}",
+  "cv_rmse_mean": 97915.29377004252,
+  "cv_rmse_std": 88383.71820686388,
+  "val_rmse_none": 38138.84432032963,
+  "val_rmse_smearing": 38693.92783222978,
+  "val_rmse_validation_multiplier": 37603.91682650413,
+  "best_correction": "validation_multiplier",
+  "best_factor": 1.141891891891892,
+  "best_val_rmse": 37603.91682650413,
+  "n_features": 303,
+  "n_train_rows": 1758,
+  "fit_seconds": 7.042705535888672,
+  "selected_features": NaN
+}

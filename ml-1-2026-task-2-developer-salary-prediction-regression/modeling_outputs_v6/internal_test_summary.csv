@@ -1,0 +1,2 @@
+model_family,feature_set,target_variant,params,best_correction,factor_used,validation_rmse_recomputed,internal_test_rmse,n_features,n_train_rows
+SVR_RBF,FULL,winsorized,"{""C"": 1.0, ""epsilon"": 0.1, ""gamma"": ""scale""}",validation_multiplier,1.141891891891892,37603.91682650413,52217.00158081891,303,1758

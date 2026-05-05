@@ -1,0 +1,109 @@
+feature
+experience.years_missing
+people.manager_missing
+databases_missing
+cloud.platforms_missing
+web.frameworks_missing
+other.tech_missing
+ai.search.tools_missing
+ai.tools.used_missing
+ai.sentiment_missing
+ai.trust_missing
+ai.complex.rating_missing
+daily.search.time_missing
+daily.answer.time_missing
+job.satisfaction_missing
+company.size_unknown
+coding.years.professional
+job.satisfaction
+years.before.professional
+age.group
+education
+company.size
+tech.purchase.influence
+ai.sentiment
+ai.trust
+ai.complex.rating
+daily.search.time
+daily.answer.time
+is.dev.professional
+people.manager
+uses.ai
+region__R02
+region__R03
+region__R04
+region__R05
+region__R06
+region__R08
+region__R09
+region__R11
+region__R12
+region__R13
+region__R16
+region__R17
+region__R18
+region____Rare__
+employment.type__Full-time
+employment.type__Part-time
+employment.type__Student
+employment.type____Rare__
+work.location__In-person
+work.location__Remote
+dev.role__Data engineer
+dev.role__Data scientist or machine learning specialist
+dev.role__DevOps specialist
+"dev.role__Developer, QA or test"
+"dev.role__Developer, back-end"
+"dev.role__Developer, desktop or enterprise applications"
+"dev.role__Developer, embedded applications or devices"
+"dev.role__Developer, front-end"
+"dev.role__Developer, full-stack"
+"dev.role__Developer, game or graphics"
+"dev.role__Developer, mobile"
+dev.role__Engineering manager
+dev.role__Other
+dev.role____Rare__
+industry__Computer Systems Design and Services
+industry__Fintech
+industry__Healthcare
+"industry__Internet, Telecomm or Information Services"
+industry__Manufacturing
+industry__Media & Advertising Services
+industry__Other
+industry__Retail and Consumer Services
+industry__Software Development
+"industry__Transportation, or Supply Chain"
+industry____Missing__
+industry____Rare__
+cloud.hosting__Hybrid (on-prem and cloud)
+cloud.hosting__On-prem
+cloud.hosting____Missing__
+first.help.source__AI-powered search (free)
+first.help.source__AI-powered search (paid)
+"first.help.source__Do search of internal share drives/storage locations for documentation (i.e., not a structured knowledge base)"
+first.help.source__Internal Developer portal
+first.help.source__Other
+first.help.source__Slack search
+first.help.source__Traditional public search engine
+first.help.source____Missing__
+ai.job.threat__No
+ai.job.threat__Yes
+ai.job.threat____Missing__
+build.vs.buy__Is set up to be customized and needs to be engineered into a usable product
+build.vs.buy__Out-of-the-box is ready to go with little need for customization
+build.vs.buy____Missing__
+prog_languages_count
+databases_count
+cloud_platforms_count
+web_frameworks_count
+other_tech_count
+dev_tools_count
+dev_environments_count
+personal_os_count
+work_os_count
+project_mgmt_tools_count
+comm_tools_count
+ai_search_tools_count
+ai_tools_used_count
+side_coding_count
+how_learned_coding_count
