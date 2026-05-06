@@ -1,0 +1,13 @@
+{
+  "selected_candidate": "BASE_PLUS_TECH_FAMILIES",
+  "selected_blocks": [
+    "tech_families"
+  ],
+  "selected_lasso_top_n": null,
+  "base_validation_rmse": 36900.793837824145,
+  "selected_validation_rmse": 36771.6297492922,
+  "selected_internal_test_rmse_before_refit": 50522.01951951215,
+  "n_features_final": 391,
+  "submission_path": "clean_v6_feature_outputs\\submission_clean_v6_plus_selected_features.csv",
+  "important_note": "Submit this only if diagnostics are at least as good as the current v6 benchmark; otherwise keep the current best public submission."
+}
