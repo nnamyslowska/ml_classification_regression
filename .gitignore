@@ -2,6 +2,8 @@ venv/
 __pycache__/
 *.pyc
 archive/
+restaurant_sample_submission.csv
+restaurants_test.csv
+restaurants_train.csv
 Submit/
-outputs_v6/
 
