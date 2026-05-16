@@ -1,0 +1,10 @@
+{
+  "selected_candidate": "TECH_WORK_PLUS_UPPER_Q75_Q90",
+  "selected_blocks": [
+    "tech_families",
+    "work_profile",
+    "upper_distribution_te"
+  ],
+  "selected_target_variant": "log_floor500",
+  "selected_lasso_top_n": null
+}
