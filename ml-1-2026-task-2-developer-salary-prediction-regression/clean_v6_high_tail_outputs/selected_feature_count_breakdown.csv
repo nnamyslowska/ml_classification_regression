@@ -1,8 +1,0 @@
-group,n_features
-base: numeric / ordinal / engineered,117
-base: multi-select salary scores,105
-base: target encodings,100
-base: top multi-select binaries,75
-base: missing indicators,18
-extra: technology families,15
-extra: work-profile compression,12
